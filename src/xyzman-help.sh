@@ -22,6 +22,7 @@ function __xyz_help() {
   __xyzman_echo_no_colour ""
   __xyzman_echo_no_colour "   commands:"
   __xyzman_echo_no_colour "       config    or c             Configures xyzman"
+  __xyzman_echo_no_colour "       fun1      or 1             Executes fun1"
   __xyzman_echo_no_colour "       version   or v"
   __xyzman_echo_no_colour "       help"
   __xyzman_echo_no_colour "       update           [force]   Updates Xyzman to the current version"

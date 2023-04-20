@@ -23,6 +23,8 @@ function xyz() {
   case "${COMMAND}" in
     c)
       COMMAND="config" ;;
+    1)
+      COMMAND="fun1" ;;
     v)
       COMMAND="version" ;;
   esac

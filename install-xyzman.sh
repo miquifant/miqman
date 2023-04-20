@@ -148,15 +148,15 @@ mv "${xyzman_stage_folder}/uninstall-xyzman.sh" "${xyzman_bin_folder}/"
 mv "${xyzman_stage_folder}"/src/xyzman-* "${xyzman_src_folder}/"
 
 
-#echo "Install modules..."
-#for module in $(cd "${xyzman_stage_folder}/src" && ls -d */); do
-#  echo "  ♠ $module"
-#  rm -fr "${xyzman_src_folder}/${module}/"
-#  mkdir -p "${xyzman_src_folder}/${module}/"
-#  for srcfile in $(ls "${xyzman_stage_folder}/src/${module}/" | egrep -v '(README[.](md|rst)|default[.]cfg)'); do
-#    cp -ar "${xyzman_stage_folder}/src/${module}/${srcfile}" "${xyzman_src_folder}/${module}/"
-#  done
-#done
+echo "Install modules..."
+for module in $(cd "${xyzman_stage_folder}/src" && ls -d */); do
+  echo "  ♠ $module"
+  rm -fr "${xyzman_src_folder}/${module}/"
+  mkdir -p "${xyzman_src_folder}/${module}/"
+  for srcfile in $(ls "${xyzman_stage_folder}/src/${module}/" | egrep -v '(README[.](md|rst)|default[.]cfg)'); do
+    cp -ar "${xyzman_stage_folder}/src/${module}/${srcfile}" "${xyzman_src_folder}/${module}/"
+  done
+done
 
 
 echo "Create user config files..."
